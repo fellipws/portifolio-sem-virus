@@ -1,0 +1,98 @@
+/* Estilos Globais e Fundo da Página */
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+body { 
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #3b4b5e; /* Azul acinzentado escuro do fundo */
+    background-image: url('https://www.transparenttextures.com/patterns/crumbled-paper.png'); /* Textura de papel */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container Principal (o "Cartão") */
+.card {
+    background-color: transparent; /* O fundo do cartão no seu figma parece mesclar com o fundo da página */
+    width: 380px; 
+    height: 680px; 
+    border-radius: 40px;
+    padding: 40px 20px; 
+    text-align: center;
+    position: relative; 
+    overflow: hidden;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: space-evenly;
+}
+
+/* Padrão de Estrelas Desenhadas (usando código SVG direto no CSS) */
+.card::before, .card::after {
+    content: ""; 
+    position: absolute;
+    width: 80px; 
+    height: 120px;
+    background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 150" fill="none" stroke="white" stroke-width="1.5"%3E%3Cpath d="M10 10l1.5 4.5h4.5l-3.5 3 1.5 4.5-3.5-3-3.5 3 1.5-4.5-3.5-3h4.5zM40 40l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6zM20 100l1 3h3l-2.5 2 1 3-2.5-2-2.5 2 1-3-2.5-2h3zM70 120l3 9h9l-7.5 6 3 9-7.5-6-7.5 6 3-9-7.5-6h9zM15 135l0.5 1.5h1.5l-1.2 1 0.5 1.5-1.2-1-1.2 1 0.5-1.5-1.2-1h1.5z"%3E%3C/path%3E%3C/svg%3E');
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    opacity: 0.8;
+}
+.card::before { top: 10px; right: 10px; } 
+.card::after { bottom: 10px; left: 10px; transform: scaleX(-1); opacity: 0.6; }
+
+/* Foto de Perfil Circular */
+.perfil {
+    width: 140px; 
+    height: 140px; 
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* Barra de Nome (estilo barra de pesquisa) */
+.nome-bar {
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo cinza translúcido */
+    padding: 12px 20px; 
+    border-radius: 25px;
+    display: flex; 
+    align-items: center; 
+    gap: 10px;
+    width: 95%; 
+    font-weight: bold;
+    color: #1a2533; /* Cor escura para o texto */
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Botões de Link (Pills) */
+.links { 
+    width: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 18px; 
+}
+
+.link-btn {
+    display: block; 
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.35); /* Translúcido como no figma */
+    color: #1a2533; /* Texto escuro */
+    text-decoration: none;
+    padding: 16px 0; 
+    border-radius: 30px;
+    font-size: 1.1rem; 
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Sombra suave */
+}
+
+/* Efeito ao passar o mouse por cima do botão */
+.link-btn:hover { 
+    background-color: rgba(255, 255, 255, 0.5); 
+    transform: translateY(-2px); 
+}

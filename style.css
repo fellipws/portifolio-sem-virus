@@ -1,4 +1,4 @@
-/* Estilos Globais e Fundo da Página */
+
 * { 
     box-sizing: border-box; 
     margin: 0; 
@@ -7,8 +7,8 @@
 
 body { 
     font-family: 'Courier New', Courier, monospace;
-    background-color: #3b4b5e; /* Azul acinzentado escuro do fundo */
-    background-image: url('https://www.transparenttextures.com/patterns/crumbled-paper.png'); /* Textura de papel */
+    background-color: #3b4b5e; 
+    background-image: url('https://www.transparenttextures.com/patterns/crumbled-paper.png'); 
     display: flex; 
     justify-content: center; 
     align-items: center; 
@@ -16,9 +16,9 @@ body {
     padding: 20px;
 }
 
-/* Container Principal (o "Cartão") */
+
 .card {
-    background-color: transparent; /* O fundo do cartão no seu figma parece mesclar com o fundo da página */
+    background-color: transparent; 
     width: 380px; 
     height: 680px; 
     border-radius: 40px;
@@ -32,7 +32,7 @@ body {
     justify-content: space-evenly;
 }
 
-/* Padrão de Estrelas Desenhadas (usando código SVG direto no CSS) */
+
 .card::before, .card::after {
     content: ""; 
     position: absolute;
@@ -46,7 +46,7 @@ body {
 .card::before { top: 10px; right: 10px; } 
 .card::after { bottom: 10px; left: 10px; transform: scaleX(-1); opacity: 0.6; }
 
-/* Foto de Perfil Circular */
+
 .perfil {
     width: 140px; 
     height: 140px; 
@@ -55,9 +55,9 @@ body {
     box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
-/* Barra de Nome (estilo barra de pesquisa) */
+
 .nome-bar {
-    background-color: rgba(255, 255, 255, 0.2); /* Fundo cinza translúcido */
+    background-color: rgba(255, 255, 255, 0.2); 
     padding: 12px 20px; 
     border-radius: 25px;
     display: flex; 
@@ -65,11 +65,11 @@ body {
     gap: 10px;
     width: 95%; 
     font-weight: bold;
-    color: #1a2533; /* Cor escura para o texto */
+    color: #1a2533; 
     box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Botões de Link (Pills) */
+
 .links { 
     width: 100%; 
     display: flex; 
@@ -80,18 +80,18 @@ body {
 .link-btn {
     display: block; 
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.35); /* Translúcido como no figma */
-    color: #1a2533; /* Texto escuro */
+    background-color: rgba(255, 255, 255, 0.35); 
+    color: #1a2533; 
     text-decoration: none;
     padding: 16px 0; 
     border-radius: 30px;
     font-size: 1.1rem; 
     font-weight: bold;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Sombra suave */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); 
 }
 
-/* Efeito ao passar o mouse por cima do botão */
+
 .link-btn:hover { 
     background-color: rgba(255, 255, 255, 0.5); 
     transform: translateY(-2px); 
